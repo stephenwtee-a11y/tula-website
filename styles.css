@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Tulā Display";
+  src: url("assets/fonts/tula-display-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --background: #f4f0e7;
+  --surface: rgba(255, 255, 255, 0.42);
+  --ink: #232821;
+  --muted: #61675e;
+  --olive: #7a753e;
+  --border: rgba(35, 40, 33, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(122, 117, 62, 0.11) 0 8rem, transparent 8.1rem),
+    radial-gradient(circle at 88% 86%, rgba(122, 117, 62, 0.08) 0 11rem, transparent 11.1rem),
+    var(--background);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.holding-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+}
+
+.content {
+  width: min(100%, 42rem);
+  padding: clamp(2.25rem, 7vw, 4.75rem) clamp(1.5rem, 6vw, 4rem);
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 4rem rgba(35, 40, 33, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.wordmark {
+  display: block;
+  width: min(100%, 20rem);
+  height: auto;
+  margin: 0 auto clamp(2rem, 6vw, 3.2rem);
+}
+
+.message {
+  margin: 0;
+  font-family: "Tulā Display", Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.8rem, 5.2vw, 2.9rem);
+  line-height: 1.16;
+  font-weight: 400;
+  letter-spacing: -0.018em;
+}
+
+.message span {
+  display: block;
+}
+
+.status {
+  width: fit-content;
+  margin: clamp(2rem, 6vw, 3rem) auto 1.25rem;
+  padding: 0.55rem 0.95rem;
+  color: var(--olive);
+  border: 1px solid rgba(122, 117, 62, 0.32);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.contact {
+  color: var(--muted);
+  font-size: 0.98rem;
+  text-decoration-color: rgba(97, 103, 94, 0.45);
+  text-underline-offset: 0.24em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.contact:hover,
+.contact:focus-visible {
+  color: var(--olive);
+  text-decoration-color: var(--olive);
+}
+
+.contact:focus-visible {
+  outline: 3px solid rgba(122, 117, 62, 0.25);
+  outline-offset: 0.35rem;
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 34rem) {
+  .holding-page {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 2.5rem 1.3rem;
+    border-radius: 1.5rem;
+  }
+
+  .wordmark {
+    width: min(100%, 14.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
