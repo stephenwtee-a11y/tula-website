@@ -1,12 +1,40 @@
-TULA HOLDING PAGE — BESPOKE TYPEFACE VERSION
+TULA WEBSITE — EARLY ACCESS VERSION
 
-Files included:
+Website files:
 - index.html
 - styles.css
-- favicon.ico
-- assets/tula-wordmark.png
-- assets/fonts/tula-display-regular.woff2
+- early-access.js
+- favicon.ico                         (existing file; unchanged)
+- CNAME                              (existing file; unchanged)
+- assets/tula-wordmark.png           (existing file; unchanged)
+- assets/fonts/tula-display-regular.woff2  (existing file; unchanged)
+- privacy/index.html
+- company-information/index.html
 
-Do not rename index.html or move files out of their folders.
+IMPORTANT
+---------
+This remains a static website with no build step.
 
-This is a static website. It needs no database, build step, or paid web-hosting package.
+The early-access form DOES NOT write directly to Supabase from the browser.
+It POSTs only the email address and honeypot value to the dedicated Supabase
+Edge Function:
+
+https://ekirxibafacfedgeimmr.supabase.co/functions/v1/early-access-signup
+
+The Edge Function and database migration live in the MAIN tulā PRODUCT REPOSITORY,
+not in this website repository, so there is only one Supabase migration history.
+
+Deploy order:
+1. Add/review the Supabase migration in the main product repo.
+2. Push the migration to the linked Supabase project.
+3. Set EARLY_ACCESS_RATE_LIMIT_SECRET as a Supabase Edge Function secret.
+4. Deploy early-access-signup with JWT verification disabled because this is an
+   intentionally public, tightly constrained endpoint.
+5. Verify the endpoint from the production website origin.
+6. Only then deploy these website files.
+
+Consent wording version: 0.1
+Privacy Notice version: 0.1
+
+No analytics, pixels, tracking cookies, CRM or bulk email-delivery provider are
+introduced by these files.

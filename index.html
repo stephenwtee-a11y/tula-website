@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tulā is a calmer way to understand your household, build a balanced plan and stay in control.">
+  <meta name="description" content="Tulā is a calmer way to understand your household, build a balanced plan and stay in control. Join tulā early access.">
   <meta name="theme-color" content="#f4f0e7">
-  <title>tulā — coming soon</title>
+  <title>tulā — early access</title>
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="stylesheet" href="styles.css">
+  <script src="early-access.js" defer></script>
 </head>
 <body>
   <main class="holding-page">
@@ -26,12 +27,66 @@
         <span>stay in control.</span>
       </h1>
 
-      <p class="status">coming soon</p>
+      <section class="early-access" aria-labelledby="early-access-heading">
+        <p class="status">coming soon</p>
 
-      <a class="contact" href="mailto:hello@tula-app.com">
-        hello@tula-app.com
-      </a>
+        <h2 id="early-access-heading" class="early-access-title">Get early access to tulā</h2>
+        <p class="early-access-intro">Be one of the first to try tulā before public launch.</p>
+
+        <form class="signup-form" id="early-access-form" novalidate>
+          <div class="signup-row">
+            <label class="sr-only" for="early-access-email">Email address</label>
+            <input
+              class="email-input"
+              id="early-access-email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              maxlength="254"
+              placeholder="Email address"
+              aria-describedby="signup-disclosure signup-error"
+              required
+            >
+            <button class="signup-button" type="submit">Join early access</button>
+          </div>
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="company-website">Company website</label>
+            <input
+              id="company-website"
+              name="website"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+            >
+          </div>
+
+          <p class="signup-error" id="signup-error" role="alert" hidden></p>
+
+          <p class="signup-disclosure" id="signup-disclosure">
+            By joining, you're asking TULA PLANNING LTD to email you about tulā early access and launch availability.
+            We won't add you to a general marketing list. You can leave at any time.
+            <a href="/privacy">Privacy Notice</a>
+          </p>
+        </form>
+
+        <div class="signup-success" id="signup-success" role="status" tabindex="-1" hidden>
+          <h2>You're on the list.</h2>
+          <p>We'll be in touch when your tulā early access is ready.</p>
+        </div>
+      </section>
+
+      <a class="contact" href="mailto:hello@tula-app.com">hello@tula-app.com</a>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Legal">
+      <a href="/privacy">Privacy</a>
+      <span aria-hidden="true">·</span>
+      <a href="/company-information">Company information</a>
+    </nav>
+  </footer>
 </body>
 </html>
