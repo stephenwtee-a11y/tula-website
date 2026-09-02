@@ -114,14 +114,6 @@ a {
   line-height: 1.2;
 }
 
-.early-access-initial {
-  display: inline-block;
-  opacity: 1;
-  transform: scale(0.89);
-  transform-origin: right center;
-  margin-right: -0.025em;
-}
-
 .early-access-intro {
   margin: 0.55rem auto 1.25rem;
   color: var(--muted);
