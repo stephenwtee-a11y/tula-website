@@ -186,6 +186,45 @@ a {
   opacity: 0.62;
 }
 
+.intent-field {
+  max-width: 28rem;
+  margin: 1rem auto 0;
+  text-align: left;
+}
+
+.intent-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.intent-label span {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+}
+
+.intent-select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 2.4rem 0.65rem 0.9rem;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(35, 40, 33, 0.14);
+  border-radius: 0.85rem;
+  font: inherit;
+  font-size: 0.88rem;
+  outline: none;
+}
+
+.intent-select:focus-visible {
+  border-color: var(--olive);
+  box-shadow: 0 0 0 3px var(--focus);
+}
+
 .signup-disclosure {
   max-width: 39rem;
   margin: 0.85rem auto 0;

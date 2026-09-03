@@ -16,8 +16,8 @@ IMPORTANT
 This remains a static website with no build step.
 
 The early-access form DOES NOT write directly to Supabase from the browser.
-It POSTs only the email address and honeypot value to the dedicated Supabase
-Edge Function:
+It POSTs the email address, an optional stable intent value, and the honeypot value
+to the dedicated Supabase Edge Function:
 
 https://ekirxibafacfedgeimmr.supabase.co/functions/v1/early-access-signup
 
@@ -33,8 +33,8 @@ Deploy order:
 5. Verify the endpoint from the production website origin.
 6. Only then deploy these website files.
 
-Consent wording version: 0.1
-Privacy Notice version: 0.1
+Consent wording version: 0.2
+Privacy Notice version: 0.2
 
 No analytics, pixels, tracking cookies, CRM or bulk email-delivery provider are
 introduced by these files.
