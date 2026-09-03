@@ -51,6 +51,28 @@
             <button class="signup-button" type="submit">Join early access</button>
           </div>
 
+          <div class="intent-field">
+            <label class="intent-label" for="early-access-intent">
+              What would you most like tulā to make easier?
+              <span>Optional</span>
+            </label>
+            <select
+              class="intent-select"
+              id="early-access-intent"
+              name="intent"
+              aria-describedby="signup-disclosure"
+            >
+              <option value="">Select one</option>
+              <option value="spend_clarity">Knowing what I can actually spend</option>
+              <option value="partner_money">Managing money with my partner</option>
+              <option value="bills_irregular">Bills and irregular expenses</option>
+              <option value="saving">Saving towards things</option>
+              <option value="debt">Managing debt</option>
+              <option value="future_visibility">Seeing what future months look like</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
           <div class="honeypot" aria-hidden="true">
             <label for="company-website">Company website</label>
             <input
@@ -67,6 +89,7 @@
           <p class="signup-disclosure" id="signup-disclosure">
             By joining, you're asking TULA PLANNING LTD to email you about tulā early access and launch availability.
             We won't add you to a general marketing list. You can leave at any time.
+            If you answer the optional question, we'll use it to understand what people most want help with.
             <a href="/privacy">Privacy Notice</a>
           </p>
         </form>

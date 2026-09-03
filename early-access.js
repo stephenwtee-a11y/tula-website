@@ -6,6 +6,7 @@
 
   const form = document.getElementById("early-access-form");
   const emailInput = document.getElementById("early-access-email");
+  const intentInput = document.getElementById("early-access-intent");
   const honeypotInput = document.getElementById("company-website");
   const errorElement = document.getElementById("signup-error");
   const successElement = document.getElementById("signup-success");
@@ -37,7 +38,13 @@
     }
 
     const email = emailInput.value.trim();
+    const intent = intentInput?.value || "";
     const website = honeypotInput.value;
+    const requestBody = { email, website };
+
+    if (intent) {
+      requestBody.intent = intent;
+    }
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -53,7 +60,7 @@
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ email, website })
+        body: JSON.stringify(requestBody)
       });
 
       let payload = null;
